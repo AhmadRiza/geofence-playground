@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Light" parent="AppTheme">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.DepaymentFull" parent="AppTheme">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/colorDepayment</item>
+        <item name="android:statusBarColor">@color/colorDepayment</item>
+    </style>
+
+    <style name="AppTheme.Kasir" parent="AppTheme.Light">
+        <item name="colorAccent">@color/colorKasir</item>
+    </style>
+</resources>

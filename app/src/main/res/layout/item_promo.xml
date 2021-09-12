@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_marginStart="@dimen/_16sdp"
+    android:layout_marginEnd="@dimen/_16sdp"
+    android:layout_marginTop="@dimen/_16sdp"
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:contentPadding="@dimen/_12sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:textSize="@dimen/_13ssp"
+            tools:text="DISKON 10K"
+            app:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:textSize="@dimen/_13ssp"
+            tools:text="8"
+            app:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="@id/tv_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_16sdp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_until"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="10 Hari lagi"
+            app:layout_constraintTop_toBottomOf="@id/tv_code"
+            app:layout_constraintStart_toStartOf="@id/tv_code"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:textSize="@dimen/_13ssp"
+            tools:text="8"
+            app:textAllCaps="true"
+            app:layout_constraintTop_toTopOf="@id/tv_code"
+            app:layout_constraintEnd_toStartOf="@id/label2"
+            android:layout_marginEnd="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_user"
+            app:layout_constraintStart_toStartOf="@id/tv_code"
+            android:background="@color/grey_line"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Area"
+            app:layout_constraintTop_toBottomOf="@id/tv_area"
+            app:layout_constraintStart_toStartOf="@id/tv_area"
+            app:layout_constraintEnd_toEndOf="@id/tv_area"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            app:layout_constraintTop_toBottomOf="@id/tv_user"
+            app:layout_constraintStart_toStartOf="@id/tv_user"
+            app:layout_constraintEnd_toEndOf="@id/tv_user" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

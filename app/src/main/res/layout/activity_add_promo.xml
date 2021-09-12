@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_profile"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:src="@drawable/ic_chevron_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title"
+                android:text="Tambah Promo"
+                android:fontFamily="@font/bold"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toEndOf="@id/img_profile"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="@dimen/_12sdp"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_delete"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                app:srcCompat="@drawable/ic_delete"
+                android:padding="@dimen/_6sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_100sdp"
+            android:clipToPadding="false"
+            android:clipChildren="false">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Kode Promo"
+                android:fontFamily="@font/bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@id/btn_service" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Layanan"
+                android:textAllCaps="false"
+                android:gravity="start|center"
+                android:minWidth="@dimen/_120sdp"
+                android:fontFamily="@font/bold"
+                android:backgroundTint="@color/grey_bright"
+                android:drawableEnd="@drawable/ic_arrow_drop_down"
+                android:drawablePadding="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/et_code" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Deskripsi Promo"
+                android:fontFamily="@font/bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_code"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Jenis"
+                android:textAllCaps="false"
+                android:gravity="start|center"
+                android:minWidth="@dimen/_120sdp"
+                android:fontFamily="@font/bold"
+                android:backgroundTint="@color/grey_bright"
+                android:drawableEnd="@drawable/ic_arrow_drop_down"
+                android:drawablePadding="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/et_info"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Total Promo"
+                android:fontFamily="@font/bold"
+                app:layout_constraintStart_toEndOf="@id/btn_type"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_type"
+                android:layout_marginStart="@dimen/_12sdp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_threshold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Threshold (berapa kali masuk area)"
+                android:inputType="number"
+                android:maxLength="2"
+                android:fontFamily="@font/bold"
+                app:layout_constraintTop_toBottomOf="@id/et_total"
+                android:layout_marginTop="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/label1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:gravity="center"
+                android:text="Masa Promo"
+                android:textColor="@color/textGrey"
+                app:layout_constraintTop_toBottomOf="@id/et_threshold"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_3sdp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17 Apr 2020"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:minWidth="@dimen/_100sdp"
+                android:fontFamily="@font/bold"
+                android:backgroundTint="@color/grey_bright"
+                android:drawablePadding="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/label1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_6sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_chevron_right"
+                android:layout_marginStart="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@id/btn_date1"
+                app:layout_constraintTop_toTopOf="@id/btn_date1"
+                app:layout_constraintBottom_toBottomOf="@id/btn_date1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19 Apr 2020"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:minWidth="@dimen/_100sdp"
+                android:fontFamily="@font/bold"
+                android:backgroundTint="@color/grey_bright"
+                android:drawablePadding="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                app:layout_constraintTop_toTopOf="@id/btn_date1"
+                app:layout_constraintStart_toEndOf="@id/dash" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/label2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:gravity="center"
+                android:text="Area Promo"
+                android:textColor="@color/textGrey"
+                app:layout_constraintTop_toBottomOf="@id/btn_date1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_3sdp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_area"
+                app:layout_constraintTop_toBottomOf="@id/label2"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="1"
+                android:paddingBottom="@dimen/_16sdp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                tools:listitem="@layout/item_area" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Tambah Area"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:backgroundTint="@color/grey_bright"
+                android:fontFamily="@font/bold"
+                android:textAllCaps="false"
+                app:drawableTint="@color/textBlack"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_add"
+                app:layout_constraintTop_toBottomOf="@id/rv_area" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MButtonPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Tambah Promo" />
+
+    </FrameLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
